@@ -1,4 +1,5 @@
 #https://forgoal.gitbooks.io/python/content/creating-a-tkinter-class-and-waiting-for-a-return-value.html
+#2021-05-29 V1
 
 import tkinter as tk
 from child import *
@@ -13,7 +14,7 @@ class windowMain(tk.Frame):
         self.button.pack(pady=20)
 
     def on_click(self):
-        result = WindowSub(self).makeSometing(self)
+        result = WindowSub(self).waitAndGetValue(self)
         self.label.configure(text="your result: %s" % result)
 
 if __name__ == "__main__":
